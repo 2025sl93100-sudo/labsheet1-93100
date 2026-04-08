@@ -30,12 +30,11 @@ assert calculator.divide(6,2)==3
 
       stage('Deploy') {
     steps {
-        sshagent(['ec2-key']) {
             sh '''
             scp -o StrictHostKeyChecking=no calculator.py ec2-user@13.53.182.196:/home/ec2-user/
             '''
             }
          }
-      }
+      
     }
 }
