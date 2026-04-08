@@ -31,7 +31,7 @@ assert calculator.divide(6,2)==3
       stage('Deploy') {
     steps {
             sh '''
-            scp -o StrictHostKeyChecking=no -i /home/cloud/jenkins-key.pem calculator.py ec2-user@13.53.182.196:/home/ec2-user/
+            scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/.ssh/jenkins-key.pem calculator.py ec2-user@13.53.182.196:/home/ec2-user/
             '''
             }
          }
